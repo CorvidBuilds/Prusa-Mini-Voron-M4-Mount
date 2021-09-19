@@ -20,3 +20,42 @@ I whipped this up in an afternoon. The goal was to make _something that works_, 
 6.  Mount M4 to Mounting Plate using 2 M3x12 bolts. I've had these bolts back out so I recommend a temporary threadlock of your choice.
 7.  If you're using the Prusa firmware add the following to your slicer's startup gcode:
 > M92 E550
+8.  If you decide to print a spacer and to use the original motor, you may have to swap some wires in the motor connector. Instructions can be found [here](https://support.bondtech.se/Guide/01.+Feeder+Upgrade+Kit/59#s606).
+
+# Klipper Config
+I use the following with success:
+```
+[tmc2209 extruder]
+uart_pin: PD5
+uart_address: 2
+diag_pin: ^PA15
+driver_SGTHRS: 100
+run_current: 0.4
+hold_current: 0.4
+sense_resistor: 0.22
+interpolate: False
+stealthchop_threshold: 999999
+
+[extruder]
+step_pin: PD9
+dir_pin: !PD8
+enable_pin: !PD10
+microsteps: 16
+rotation_distance: 23.421 #26.2564  # (200 * 16 * 48/18) / 325
+gear_ratio: 80:20
+full_steps_per_rotation: 400	#200 for 1.8 degree, 400 for 0.9 degree
+nozzle_diameter: 0.400
+filament_diameter: 1.750
+heater_pin: PB1
+sensor_type: ATC Semitec 104GT-2
+sensor_pin: PC0
+#control: pid
+# Prusa's firmware defaults.
+#pid_Kp: 7
+#pid_Ki: 0.5
+#pid_Kd: 45
+min_temp: 10
+max_temp: 305
+pressure_advance = 0.64 #0.333
+pressure_advance_smooth_time: 0.15
+```
