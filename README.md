@@ -16,5 +16,5 @@ I whipped this up in an afternoon. The goal was to make _something that works_, 
 3.  Add Heated Inserts as indicated by the parts. There should be 4 total.
 4.  Mount Adapter Plate in place of the original extruder using 2 M3x16 bolts as indicated. The unmarked hole is here if you want to index the plate with an additional M3 bolt and nut to imitate the original design.
 5.  Mount Mounting Plate onto the Adapter Plate using 2 M3x12 bolts as indicated.
-![Assembly](/images/Assembly.png)
+![Assembly](https://github.com/CorvidBuilds/Prusa-Mini-Voron-M4-Mount/blob/main/images/Aseembly.png)
 6.  Mount M4 to Mounting Plate using 2 M3x12 bolts. I've had these bolts back out so I recommend a temporary threadlock of your choice.
