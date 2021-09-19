@@ -18,3 +18,5 @@ I whipped this up in an afternoon. The goal was to make _something that works_, 
 5.  Mount Mounting Plate onto the Adapter Plate using 2 M3x12 bolts as indicated.
 ![Assembly](https://github.com/CorvidBuilds/Prusa-Mini-Voron-M4-Mount/blob/main/images/Aseembly.png)
 6.  Mount M4 to Mounting Plate using 2 M3x12 bolts. I've had these bolts back out so I recommend a temporary threadlock of your choice.
+7.  If you're using the Prusa firmware add the following to your slicer's startup gcode:
+> M92 E550
