@@ -24,6 +24,7 @@ I whipped this up in an afternoon. The goal was to make _something that works_, 
 
 # Klipper Config
 I use the following with success:
+###### Note: You MUST validate these settings for your own machine.
 ```
 [tmc2209 extruder]
 uart_pin: PD5
@@ -43,7 +44,7 @@ enable_pin: !PD10
 microsteps: 16
 rotation_distance: 23.421 #26.2564  # (200 * 16 * 48/18) / 325
 gear_ratio: 80:20
-full_steps_per_rotation: 400	#200 for 1.8 degree, 400 for 0.9 degree
+full_steps_per_rotation: 200	#200 for 1.8 degree, 400 for 0.9 degree
 nozzle_diameter: 0.400
 filament_diameter: 1.750
 heater_pin: PB1
